@@ -1,160 +1,133 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Название вашего сайта — Коротко и ёмко</title>
-  <meta name="description" content="Короткое описание сайта/услуг — 1 предложение." />
-  <meta name="theme-color" content="#0f172a" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Название вашего сайта" />
-  <meta property="og:description" content="Короткое описание сайта/услуг" />
-  <meta property="og:type" content="website" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shubert Agency — PR и Telegram сопровождение</title>
+  <meta name="description" content="Федеральное PR-агентство Shubert Agency. Развитие Telegram-каналов и PR-поддержка бизнеса.">
   <style>
-    :root{
-      --bg:#0f172a; --card:#0b1220; --accent:#06b6d4; --muted:#9aa7b7; --radius:14px;
-      --maxw:1100px;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#071227 0%,var(--bg) 100%);color:#e6eef6}
-    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:grid;place-items:center;font-weight:700;
-      box-shadow:0 6px 20px rgba(3,7,18,.6);
-    }
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px;align-items:center}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)); padding:22px;border-radius:var(--radius);box-shadow:0 6px 28px rgba(2,6,23,.6)}
-    h1{margin:0 0 12px;font-size:clamp(20px,3.6vw,36px);line-height:1.05}
-    p.lead{color:var(--muted);margin:0 0 18px}
-    .cta{display:inline-flex;gap:10px}
-    .btn{
-      background:var(--accent);color:#021225;padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;box-shadow:0 8px 18px rgba(6,182,212,.12);
-    }
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-    .feature{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));border:1px solid rgba(255,255,255,0.02)}
-    .aside{position:relative}
-    .mock{
-      height:360px;border-radius:12px;display:flex;flex-direction:column;gap:12px;padding:18px;background:linear-gradient(180deg,#071226 0%, #09182a 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);
-    }
-    .mock .item{flex:1;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
-    main{margin-top:28px}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    footer{margin-top:28px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
-    .form-row{display:flex;gap:10px}
-    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;resize:none}
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}.features{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}
-    }
-    @media (max-width:520px){
-      .features{grid-template-columns:1fr}
-    }
+    body { margin:0; font-family: "Inter", sans-serif; background:#f5f5f5; color:#111; line-height:1.6; }
+    a { color:#0366d6; text-decoration:none; }
+    header { background:#021225; color:white; padding:40px 20px; text-align:center; }
+    header h1 { margin:0; font-size:2em; }
+    header p { margin:10px 0 0; font-size:1.2em; }
+    .wrap { max-width:1000px; margin:0 auto; padding:20px; }
+    section { background:white; padding:30px; margin-bottom:20px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.05); }
+    h2 { margin-top:0; color:#021225; }
+    ul { padding-left:20px; }
+    .case { margin-bottom:20px; }
+    .price-item { margin-bottom:10px; }
+    footer { text-align:center; font-size:14px; color:#555; margin:20px 0; }
+    .contact a { word-break: break-all; }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Shubert Agency</h1>
+    <p>Федеральный уровень PR-сопровождения с честной ценой</p>
+    <p>Развитие Telegram-каналов и PR-поддержка бизнеса, который хочет быть заметным, влиятельным и узнаваемым.</p>
+  </header>
+
   <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">VS</div>
-        <div>
-          <div style="font-weight:800">Ваш бренд</div>
-          <div style="font-size:12px;color:var(--muted)">Короткий слоган</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#about">О нас</a>
-        <a href="#services">Услуги</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div>
-        <div class="card">
-          <h1>Простой и понятный сайт для ваших клиентов</h1>
-          <p class="lead">Создаём адаптивные, быстрые и безопасные сайты: лендинги, портфолио, корпоративные страницы и магазины.</p>
-          <div class="cta">
-            <button class="btn" onclick="scrollToForm()">Связаться</button>
-            <a href="#services" style="padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted);text-decoration:none;align-self:center">Услуги</a>
-          </div>
-          <div class="features" aria-hidden="false" style="margin-top:18px">
-            <div class="feature"><strong>Адаптивность</strong><div style="color:var(--muted);margin-top:8px">Работает на любом устройстве</div></div>
-            <div class="feature"><strong>SEO-готов</strong><div style="color:var(--muted);margin-top:8px">Базовая микроразметка и метатеги</div></div>
-            <div class="feature"><strong>Быстро</strong><div style="color:var(--muted);margin-top:8px">Оптимизирован под реальные метрики</div></div>
-          </div>
-        </div>
-
-        <main id="about" style="margin-top:16px">
-          <div class="card" style="padding:18px">
-            <h2 id="services" style="margin-top:0">Что я могу сделать</h2>
-            <div class="two-col">
-              <div>
-                <ul>
-                  <li>Лендинг / корпоративный сайт</li>
-                  <li>Интернет-магазин (WooCommerce / Shopify)</li>
-                  <li>SPA на React / Next.js / Remix</li>
-                  <li>SEO, настройка аналитики и продвижение</li>
-                </ul>
-              </div>
-              <div>
-                <p style="color:var(--muted)">Быстро запускаю минимально рабочий продукт (MVP), настраиваю домен, HTTPS, CI/CD и обучаю работе с сайтом.</p>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-
-      <aside class="aside">
-        <div class="card mock" aria-hidden="true">
-          <div class="item">Превью страницы</div>
-          <div class="item">Блок с услугами</div>
-          <div class="item">Контактная форма</div>
-        </div>
-      </aside>
+    <section>
+      <h2>Зачем бизнесу нужен PR?</h2>
+      <p>PR — это не просто публикации в СМИ или интервью в YouTube, это системный инструмент, который делает ваш бизнес:</p>
+      <ul>
+        <li>узнаваемым для клиентов</li>
+        <li>защищенным, поскольку медийные компании привлекут к себе больше внимания</li>
+        <li>надежным для инвесторов</li>
+        <li>привлекательным для сотрудников</li>
+      </ul>
+      <p>PR укрепляет позиции на рынке, снижает затраты на продвижение и открывает доступ к возможностям, которые недоступны «невидимым» компаниям.</p>
     </section>
 
-    <section class="card" id="contact" style="margin-top:18px">
-      <h3 style="margin-top:0">Связаться</h3>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="submitted(event)">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <input name="name" placeholder="Имя" required />
-          <input name="email" type="email" placeholder="Email" required />
-        </div>
-        <div style="margin-top:10px">
-          <input name="subject" placeholder="Тема" />
-        </div>
-        <div style="margin-top:10px">
-          <textarea name="message" rows="5" placeholder="Сообщение" required></textarea>
-        </div>
-        <div style="margin-top:12px;display:flex;gap:10px">
-          <button type="submit" class="btn">Отправить</button>
-          <button type="button" onclick="copyMail()" style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted)">Копировать почту</button>
-        </div>
-        <div id="note" style="margin-top:10px;color:var(--muted);font-size:13px">Или напишите на <span id="mail">hello@site.example</span></div>
-      </form>
+    <section>
+      <h2>О нас</h2>
+      <ul>
+        <li>Юлия Шуберт, основатель Shubert Agency</li>
+        <li>ex. PR-директор «Мегафон» (6 лет)</li>
+        <li>17+ лет в PR и журналистике</li>
+        <li>Образование: «Журналистика» и «Государственное и муниципальное управление»</li>
+        <li>Награды: «Лучший PR-менеджер года» и «Лучший PR-проект года»</li>
+        <li>PRD edtech-проекта и Всероссийского фестиваля-форума «Ангара-Джаз»</li>
+      </ul>
     </section>
 
-    <footer>
-      <div>© <span id="year"></span> Ваш бренд. Все права защищены.</div>
-      <div style="color:var(--muted)">Сделано с заботой</div>
-    </footer>
+    <section>
+      <h2>С кем мы работаем</h2>
+      <ul>
+        <li>Производство и промышленность</li>
+        <li>Личный бренд предпринимателей и политиков</li>
+        <li>Авиакомпании и пароходства</li>
+        <li>Туризм и событийный туризм</li>
+        <li>Франчайзинг</li>
+        <li>EdTech</li>
+        <li>Спортивное оборудование</li>
+        <li>IT</li>
+        <li>E-commerce</li>
+        <li>Культурные и социальные проекты</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Что мы предлагаем</h2>
+      <ol>
+        <li><strong>PR-сопровождение:</strong> создаём и развиваем репутацию в СМИ, строим отношения с журналистами и формируем позитивный образ вашего бренда.</li>
+        <li><strong>Организация мероприятий:</strong> пресс-туры, конференции, презентации, мастер-классы — продумано до мелочей.</li>
+        <li><strong>Ведение Telegram-каналов:</strong> стратегия, контент, диалог с аудиторией, превращение канала в инструмент продаж и репутации.</li>
+        <li><strong>Комплексные коммуникации:</strong> от стратегии до анализа результата. Индивидуальные решения, без шаблонов.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Кейсы</h2>
+      <div class="case">
+        <strong>«Ангара-Джаз»</strong><br>
+        500+ публикаций без бюджета, поддержка Минкультуры, участие губернатора и федеральных спикеров.<br>
+        39 000 зрителей оффлайн, десятки публикаций в федеральных медиа.
+      </div>
+      <div class="case">
+        <strong>МЧС России × EdTech:</strong><br>
+        150+ публикаций, размещение в метро, высокий целевой трафик.
+      </div>
+      <div class="case">
+        <strong>EdTech-компания:</strong><br>
+        За 3 года — рост с 10 до 600 публикаций, первое место по упоминаемости в индустрии, +140% клиентов.
+      </div>
+      <div class="case">
+        <strong>Эксперт по эмоциональному интеллекту:</strong><br>
+        60+ федеральных публикаций за 8 месяцев, рост стоимости услуг и международные проекты.
+      </div>
+    </section>
+
+    <section>
+      <h2>Стоимость</h2>
+      <p>Каждый проект индивидуален. Работаем по KPI, без “пакетных предложений”. Клиент платит только гонорар агентству.</p>
+      <ul>
+        <li>PR-сопровождение — от 200 000 ₽ / мес</li>
+        <li>Ведение Telegram-канала — от 150 000 ₽ / мес</li>
+        <li>Создание собственного медиа — от 400 000 ₽ / мес</li>
+        <li>Консалтинг — индивидуальные условия</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Контакты</h2>
+      <p>Юлия Шуберт, основатель Shubert Agency</p>
+      <p>Email: <a href="mailto:yulia.shubert@yandex.ru">yulia.shubert@yandex.ru</a></p>
+      <p>Телефон: 8 908 656 34 65</p>
+      <p>Telegram: <a href="https://t.me/Shubert_Juliya" target="_blank">@Shubert_Juliya</a></p>
+      <p>Telegram-канал: <a href="https://t.me/shubertpropr" target="_blank">shubertpropr</a></p>
+    </section>
+
   </div>
+
+  <footer>
+    © <span id="year"></span> Shubert Agency. Все права защищены.
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    function scrollToForm(){document.getElementById('contact').scrollIntoView({behavior:'smooth'})}
-    function submitted(e){
-      // простая локальная обработка — реальная отправка идёт через formspree
-      // оставляем поведение по умолчанию, но можно добавить AJAX.
-      setTimeout(()=>alert('Спасибо! Сообщение отправлено.'), 200);
-    }
-    function copyMail(){
-      const mail = document.getElementById('mail').textContent;
-      navigator.clipboard?.writeText(mail).then(()=>alert('Почта скопирована: '+mail));
-    }
   </script>
 </body>
 </html>
