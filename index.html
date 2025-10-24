@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Название вашего сайта — Коротко и ёмко</title>
+  <meta name="description" content="Короткое описание сайта/услуг — 1 предложение." />
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Название вашего сайта" />
+  <meta property="og:description" content="Короткое описание сайта/услуг" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#0f172a; --card:#0b1220; --accent:#06b6d4; --muted:#9aa7b7; --radius:14px;
+      --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#071227 0%,var(--bg) 100%);color:#e6eef6}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:grid;place-items:center;font-weight:700;
+      box-shadow:0 6px 20px rgba(3,7,18,.6);
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)); padding:22px;border-radius:var(--radius);box-shadow:0 6px 28px rgba(2,6,23,.6)}
+    h1{margin:0 0 12px;font-size:clamp(20px,3.6vw,36px);line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-flex;gap:10px}
+    .btn{
+      background:var(--accent);color:#021225;padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;box-shadow:0 8px 18px rgba(6,182,212,.12);
+    }
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .feature{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));border:1px solid rgba(255,255,255,0.02)}
+    .aside{position:relative}
+    .mock{
+      height:360px;border-radius:12px;display:flex;flex-direction:column;gap:12px;padding:18px;background:linear-gradient(180deg,#071226 0%, #09182a 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+    .mock .item{flex:1;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    main{margin-top:28px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    footer{margin-top:28px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+    .form-row{display:flex;gap:10px}
+    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;resize:none}
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}.features{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      .features{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">VS</div>
+        <div>
+          <div style="font-weight:800">Ваш бренд</div>
+          <div style="font-size:12px;color:var(--muted)">Короткий слоган</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>Простой и понятный сайт для ваших клиентов</h1>
+          <p class="lead">Создаём адаптивные, быстрые и безопасные сайты: лендинги, портфолио, корпоративные страницы и магазины.</p>
+          <div class="cta">
+            <button class="btn" onclick="scrollToForm()">Связаться</button>
+            <a href="#services" style="padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted);text-decoration:none;align-self:center">Услуги</a>
+          </div>
+          <div class="features" aria-hidden="false" style="margin-top:18px">
+            <div class="feature"><strong>Адаптивность</strong><div style="color:var(--muted);margin-top:8px">Работает на любом устройстве</div></div>
+            <div class="feature"><strong>SEO-готов</strong><div style="color:var(--muted);margin-top:8px">Базовая микроразметка и метатеги</div></div>
+            <div class="feature"><strong>Быстро</strong><div style="color:var(--muted);margin-top:8px">Оптимизирован под реальные метрики</div></div>
+          </div>
+        </div>
+
+        <main id="about" style="margin-top:16px">
+          <div class="card" style="padding:18px">
+            <h2 id="services" style="margin-top:0">Что я могу сделать</h2>
+            <div class="two-col">
+              <div>
+                <ul>
+                  <li>Лендинг / корпоративный сайт</li>
+                  <li>Интернет-магазин (WooCommerce / Shopify)</li>
+                  <li>SPA на React / Next.js / Remix</li>
+                  <li>SEO, настройка аналитики и продвижение</li>
+                </ul>
+              </div>
+              <div>
+                <p style="color:var(--muted)">Быстро запускаю минимально рабочий продукт (MVP), настраиваю домен, HTTPS, CI/CD и обучаю работе с сайтом.</p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <aside class="aside">
+        <div class="card mock" aria-hidden="true">
+          <div class="item">Превью страницы</div>
+          <div class="item">Блок с услугами</div>
+          <div class="item">Контактная форма</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card" id="contact" style="margin-top:18px">
+      <h3 style="margin-top:0">Связаться</h3>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="submitted(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <input name="name" placeholder="Имя" required />
+          <input name="email" type="email" placeholder="Email" required />
+        </div>
+        <div style="margin-top:10px">
+          <input name="subject" placeholder="Тема" />
+        </div>
+        <div style="margin-top:10px">
+          <textarea name="message" rows="5" placeholder="Сообщение" required></textarea>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:10px">
+          <button type="submit" class="btn">Отправить</button>
+          <button type="button" onclick="copyMail()" style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted)">Копировать почту</button>
+        </div>
+        <div id="note" style="margin-top:10px;color:var(--muted);font-size:13px">Или напишите на <span id="mail">hello@site.example</span></div>
+      </form>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Ваш бренд. Все права защищены.</div>
+      <div style="color:var(--muted)">Сделано с заботой</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToForm(){document.getElementById('contact').scrollIntoView({behavior:'smooth'})}
+    function submitted(e){
+      // простая локальная обработка — реальная отправка идёт через formspree
+      // оставляем поведение по умолчанию, но можно добавить AJAX.
+      setTimeout(()=>alert('Спасибо! Сообщение отправлено.'), 200);
+    }
+    function copyMail(){
+      const mail = document.getElementById('mail').textContent;
+      navigator.clipboard?.writeText(mail).then(()=>alert('Почта скопирована: '+mail));
+    }
+  </script>
+</body>
+</html>
