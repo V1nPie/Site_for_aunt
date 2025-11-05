@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubert Agency</title>
+
+  <!-- Шрифт Poppins с поддержкой кириллицы -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+
+  <style>
+    /* Базовые стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #f2f1ee 0%, #f7f6f4 100%);
+      color: #3a3a3a;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+
+    /* Эффект "газетной бумаги" */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.04) 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    /* Шапка */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(247, 246, 244, 0.95);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(4px);
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #3a3a3a;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* Секции */
+    section {
+      padding: 120px 10% 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Первый экран */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      min-height: 90vh;
+    }
+
+    .hero-text {
+      flex: 1 1 45%;
+    }
+
+    .hero-text h2 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      max-width: 500px;
+    }
+
+    .hero img {
+      flex: 1 1 45%;
+      max-width: 420px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Заголовки */
+    section h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* Кейсы */
+    .case {
+      margin-bottom: 50px;
+    }
+
+    .case img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 10px;
+      background-color: #e5e4e1;
+    }
+
+    /* Контакты */
+    .contacts a {
+      display: block;
+      text-decoration: none;
+      color: #3a3a3a;
+      margin-bottom: 6px;
+    }
+
+    .contacts a:hover {
+      opacity: 0.7;
+    }
+
+    /* Адаптив */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero img {
+        max-width: 80%;
+      }
+      .hero-text h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Shubert Agency</h1>
+    <nav>
+      <a href="#about">О нас</a>
+      <a href="#clients">С кем работаем</a>
+      <a href="#services">Что предлагаем</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#pricing">Стоимость</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Shubert Agency</h2>
+      <p>Федеральный уровень PR-сопровождения с честной ценой. Развитие Telegram-каналов и PR-поддержка бизнеса, который хочет быть заметным, влиятельным и узнаваемым.</p>
+    </div>
+    <img src="2I1A5207.jpg" alt="Юлия Шуберт">
+  </section>
+
+  <section id="about">
+    <h2>О нас</h2>
+    <p>Юлия Шуберт, основатель Shubert Agency<br>
+    ex. PR-директор «Мегафон» (6 лет)<br>
+    17+ лет в PR и журналистике<br>
+    Образование: «Журналистика» и «Государственное и муниципальное управление»<br>
+    Награды: «Лучший PR-менеджер года» и «Лучший PR-проект года»<br>
+    PRD edtech-проекта и Всероссийского фестиваля-форума «Ангара-Джаз»</p>
+  </section>
+
+  <section id="clients">
+    <h2>С кем мы работаем</h2>
+    <p>Производство и промышленность<br>
+    Личный бренд предпринимателей и политиков<br>
+    Авиакомпании и пароходства<br>
+    Туризм и событийный туризм<br>
+    Франчайзинг<br>
+    EdTech<br>
+    Спортивное оборудование<br>
+    IT<br>
+    E-commerce<br>
+    Культурные и социальные проекты</p>
+  </section>
+
+  <section id="services">
+    <h2>Что мы предлагаем</h2>
+    <p>
+      <b>1. PR-сопровождение</b><br>
+      Создаём и развиваем репутацию в СМИ, строим отношения с журналистами и формируем позитивный образ бренда.<br><br>
+
+      <b>2. Организация мероприятий</b><br>
+      От идеи до реализации: пресс-туры, конференции, мастер-классы. Мы создаём события, о которых говорят.<br><br>
+
+      <b>3. Ведение Telegram-каналов</b><br>
+      Разрабатываем стратегию, контент и выстраиваем диалог с аудиторией.<br><br>
+
+      <b>4. Комплексные коммуникации</b><br>
+      От стратегии до анализа результата. Без шаблонов — только индивидуальные решения под задачи клиента.
+    </p>
+  </section>
+
+  <section id="cases">
+    <h2>Кейсы</h2>
+    <div class="case">
+      <p><b>«Ангара-Джаз»:</b> когда фестиваль звучит не только со сцены, но и в СМИ.</p>
+      <p>500+ публикаций без бюджета, поддержка Минкультуры, участие губернатора и федеральных спикеров.</p>
+      <div class="img-placeholder"></div>
+    </div>
+    <div class="case">
+      <p><b>МЧС России × EdTech:</b> 150+ публикаций, размещение в метро, высокий целевой трафик.</p>
+      <div class="img-placeholder"></div>
+    </div>
+    <div class="case">
+      <p><b>EdTech-компания:</b> за 3 года — рост с 10 до 600 публикаций, первое место по упоминаемости.</p>
+      <div class="img-placeholder"></div>
+    </div>
+    <div class="case">
+      <p><b>Эксперт по эмоциональному интеллекту:</b> 60+ федеральных публикаций, вход в топ-5 авторов.</p>
+      <div class="img-placeholder"></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Стоимость</h2>
+    <p>Каждый проект индивидуален. Без шаблонов и «пакетных предложений». Работаем по KPI и с чёткими гарантиями.<br><br>
+    — PR-сопровождение — от 200 000 ₽ / мес<br>
+    — Ведение Telegram-канала — от 150 000 ₽ / мес<br>
+    — Создание собственного медиа — от 400 000 ₽ / мес<br>
+    — Консалтинг — индивидуально</p>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <div class="contacts">
+      <a href="mailto:yulia.shubert@yandex.ru">yulia.shubert@yandex.ru</a>
+      <a href="tel:+79086563465">8 908 656 34 65</a>
+      <a href="https://t.me/Shubert_Juliya" target="_blank">@Shubert_Juliya</a>
+      <a href="https://t.me/shubertpropr" target="_blank">Telegram-канал</a>
+    </div>
+  </section>
+</body>
+</html>
